@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Arapey&display=swap");
+
+html,
+body {
+  background: url('https://wallpaperaccess.com/full/1780529.jpg');
+}
+
+.top{
+  border: 1px solid white;
+  background-color: white;
+  opacity: .7; 
+}
+.title {
+  font-family: "Arapey";
+  display: flex;
+  justify-content: space-around;
+  font-size: 60px;
+  letter-spacing: .5em;
+}
+
+.comp-1{
+  margin: 0 auto;
+  padding: -40px;
+  border: 1px solid black;
+  width: 1000px;
+  height: 860px;
+  background-color: grey;
+  margin-top: 40px;
+}

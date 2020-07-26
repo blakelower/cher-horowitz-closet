@@ -1,26 +1,39 @@
-jQuery(function($) {
-    var arr = new Array('./images/download-4.jpg', './images/download-5.jpg', './images/download-6.jpg', './images/download-3.jpg')
-    $.each($.shuffle(arr), function (_, src) {
-        $('<img />', {
-            src: src
-        }).appendTo('#array')
-    })
-    $('button.array').click(function () {
-        $('#array').shuffle()
-    });
-});
+var p1 = new Image();
+var p2 = new Image();
+var p3 = new Image();
+var p4 = new Image();
+var p5 = new Image();
+var p6 = new Image();
+var p7 = new Image();
+var p8 = new Image();
 
-(function ($) {
-    $.fn.shuffle = function () {
-        var _self = this,
-        children = $.shuffle(this.children().get());
-        $.each(children, function () {
-            _self.append(this)
-        })
-        return this;
-    };
-    $.shuffle = function (arr) {
-        for (var j,x,i = arr.length; i; j=parseInt(Math.random() * i), x = arr[--i], arr[i]=arr[j], arr[j] = x);
-        return arr
-    };
-})(jQuery)
+p1.src="./images/download.jpg";
+p2.src="./images/download-1.jpg";
+p3.src="./images/download-2.jpg";
+p4.src="./images/images.jpg";
+p5.src="./images/images-1.jpg";
+p6.src="./images/images-2.jpg";
+p7.src="./images/images-3.jpg";
+// p8.src="./images/images-5.jpg";
+
+var imgArray = new Array(p1, p2, p3, p4, p5, p6, p7);
+
+var counter = 0;
+var end = imgArray.length - 1;
+
+
+function scroll_backward() {
+    if (counter == 0){
+    } else {
+        counter--;
+    }
+    document.pic1.src = imgArray[counter].src;
+}
+
+function scroll_forward(){
+    if (counter == end){
+    } else {
+        counter++;
+    }
+    document.pic1.src = imgArray[counter].src;
+}
